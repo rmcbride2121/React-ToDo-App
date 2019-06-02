@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -30,4 +30,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+li {
+  list-style-type: none;
+}
+
+span {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
 }

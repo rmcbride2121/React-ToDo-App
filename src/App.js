@@ -12,10 +12,6 @@ class App extends Component {
     }
   }
 
-  // toggle = () => {
-  //   this.setState({isOn: !this.state.isOn})
-  // }
-
   inputUpdate = event => {
     this.setState({input: event.target.value})
   }

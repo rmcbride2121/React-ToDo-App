@@ -8,10 +8,12 @@ function ListComponent(props) {
       <ul class="list-group">
         {props.items.map((item, index) => {
           return (
-            <div>
-              <li key={index}>{item}</li>
-              <input type='radio' class="form-control"/>
-            </div>
+            <li>
+              <label>
+                <input type='checkbox' />
+              </label>
+              <span key={index}>{item}</span>
+            </li>
           );
         })}
       </ul>
