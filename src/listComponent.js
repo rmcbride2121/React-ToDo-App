@@ -10,7 +10,10 @@ function ListComponent(props) {
           return (
             <li>
               <label>
-                <input type='checkbox' />
+                <input 
+                  type='checkbox'
+                  onClick = {()=>props.deleteTodo(props.index)}
+                 />
               </label>
               <span key={index}>{item}</span>
             </li>

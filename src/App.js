@@ -25,6 +25,12 @@ class App extends Component {
     console.log("This is state***", this.state.items)
   }
 
+  deleteTodo = (index) =>{
+    const removeTodo = this.state.items;
+    removeTodo.splice(index, 1);
+    this.setState({items:removeTodo})
+  }
+
   render() {
     return (
       <div className="App">
@@ -33,7 +39,14 @@ class App extends Component {
           <form onSubmit={this.formSubmit} class="form-group">
             <input value={this.state.input} onChange={this.inputUpdate} class="form-control"/>
           </form>
-          <ListComponent items={this.state.items} />
+          {this.state.items.map((items, index ) =>(
+            <ListComponent 
+              items={this.state.items}
+              index={index}
+              key={index}
+              deleteTodo = {this.deleteTodo}
+             />
+          ))}  
         </header>
       </div>
     );
