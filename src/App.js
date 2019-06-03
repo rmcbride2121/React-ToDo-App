@@ -39,14 +39,10 @@ class App extends Component {
           <form onSubmit={this.formSubmit} class="form-group">
             <input value={this.state.input} onChange={this.inputUpdate} class="form-control"/>
           </form>
-          {this.state.items.map((items, index ) =>(
             <ListComponent 
               items={this.state.items}
-              index={index}
-              key={index}
               deleteTodo = {this.deleteTodo}
              />
-          ))}  
         </header>
       </div>
     );
